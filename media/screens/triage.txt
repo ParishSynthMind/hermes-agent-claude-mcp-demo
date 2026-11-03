@@ -1,0 +1,21 @@
+$ scripts/run_task.sh prompts/2-triage-report.txt transcripts/run2-triage-report
+~ Hermes Agent v0.22.6 on claude-sonnet-5-5, toolset: mcp-guarded_github only
+
+~ MCP calls (guard audit log, all status ok):
+  list_issues          ParishSynthMind/hermes-agent-claude-mcp-demo
+  list_pull_requests   modelcontextprotocol/typescript-sdk  (30, then 100)
+  get_issue            #1, #2, #3
+  get_pull_request     modelcontextprotocol/typescript-sdk #3129
+
+~ Hermes' triage report (trimmed):
++ #1 token on a private repo: done when the demo reruns with a fine-grained token
++    and the token appears in neither the session log nor the audit log.
++ #2 real comment: done when dryRun is off for this repo only and the audit log
++    shows status ok and exactly one POST.
++ #3 Sonnet vs Opus: done when both models have run the same prompt, with tool
++    calls, tokens and any attempt to get round the refusal recorded.
++ Latest open PR: #3129 "fix: use RequestInit['headers'] in normalizeHeaders"
++    by theOguz16, 2 commits, 2 files, +12 / -2
+? I checked the 100 most recent open PRs. A PR beyond that window could in
+?    principle have been updated more recently.   <- true: see README
+~ 8 tool calls, 106,457 tokens, 24.4 s, exit code 0

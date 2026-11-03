@@ -1,0 +1,1 @@
+Using only the guarded_github tools: list the open issues in ParishSynthMind/hermes-agent-claude-mcp-demo, then give me a three-bullet summary of what work is outstanding, one bullet per issue, with the issue number.

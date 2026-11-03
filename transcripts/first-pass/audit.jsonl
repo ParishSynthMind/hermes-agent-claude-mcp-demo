@@ -1,0 +1,9 @@
+{"ts":"2026-11-03T06:49:33.775Z","tool":"list_issues","args":{"owner":"ParishSynthMind","repo":"hermes-agent-claude-mcp-demo","state":"open","per_page":20},"status":"ok","duration_ms":502}
+{"ts":"2026-11-03T06:49:49.882Z","tool":"list_issues","args":{"owner":"ParishSynthMind","repo":"hermes-agent-claude-mcp-demo","state":"open","per_page":20},"status":"ok","duration_ms":80}
+{"ts":"2026-11-03T06:49:50.929Z","tool":"list_pull_requests","args":{"owner":"modelcontextprotocol","repo":"typescript-sdk","state":"open","per_page":30},"status":"ok","duration_ms":1028}
+{"ts":"2026-11-03T06:49:54.650Z","tool":"get_issue","args":{"owner":"ParishSynthMind","repo":"hermes-agent-claude-mcp-demo","number":1},"status":"ok","duration_ms":305}
+{"ts":"2026-11-03T06:49:55.024Z","tool":"get_issue","args":{"owner":"ParishSynthMind","repo":"hermes-agent-claude-mcp-demo","number":2},"status":"ok","duration_ms":356}
+{"ts":"2026-11-03T06:49:55.463Z","tool":"get_issue","args":{"owner":"ParishSynthMind","repo":"hermes-agent-claude-mcp-demo","number":3},"status":"ok","duration_ms":420}
+{"ts":"2026-11-03T06:49:56.391Z","tool":"get_pull_request","args":{"owner":"modelcontextprotocol","repo":"typescript-sdk","number":3129},"status":"ok","duration_ms":887}
+{"ts":"2026-11-03T06:50:19.570Z","tool":"add_issue_comment","args":{"owner":"modelcontextprotocol","repo":"typescript-sdk","number":3129,"body":"Reviewed by Hermes, looks fine"},"status":"refused","duration_ms":1,"error":"Refused: modelcontextprotocol/typescript-sdk is not in the comment allowlist. Allowed repos: ParishSynthMind/hermes-agent-claude-mcp-demo."}
+{"ts":"2026-11-03T06:50:21.895Z","tool":"add_issue_comment","args":{"owner":"ParishSynthMind","repo":"hermes-agent-claude-mcp-demo","number":2,"body":"Hermes test run: tool path works"},"status":"dry_run","duration_ms":0}

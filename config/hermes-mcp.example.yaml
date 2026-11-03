@@ -1,0 +1,30 @@
+# The parts of ~/.hermes/config.yaml (or $HERMES_HOME/config.yaml) this demo changes.
+# Hermes writes a full config on install; set these with the commands in
+# scripts/setup_hermes.sh rather than replacing the whole file.
+
+model:
+  provider: anthropic            # native Anthropic Messages API, no OpenRouter in between
+  default: claude-sonnet-5-5     # any current Claude model id works here
+
+auth:
+  # Hermes can borrow (and refresh) a Claude Code login it finds on the machine.
+  # Turned off so the only credential it ever uses is ANTHROPIC_API_KEY from the
+  # environment of the process that launches it.
+  adopt_external_logins: false
+
+mcp_servers:
+  guarded_github:
+    command: node
+    args:
+      - /absolute/path/to/mcp-guarded-github-tools/dist/src/index.js
+    env:
+      # Hermes passes only these (plus a safe baseline) to the server, not your whole shell.
+      MCP_GUARD_CONFIG: /absolute/path/to/hermes-agent-claude-mcp-demo/config/guard-config.json
+      MCP_GUARD_AUDIT_LOG: /absolute/path/to/hermes-agent-claude-mcp-demo/run/audit.jsonl
+      # GITHUB_TOKEN: leave out for public repos. For private repos use a fine-grained
+      # token, and prefer `hermes secrets` or the launching environment over this file.
+    connect_timeout: 60
+    enabled: true
+    # Optional: hide the write tool completely instead of relying on the allowlist.
+    # tools:
+    #   exclude: [add_issue_comment]

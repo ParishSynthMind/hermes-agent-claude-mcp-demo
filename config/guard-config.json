@@ -1,0 +1,6 @@
+{
+  "commentAllowlist": ["ParishSynthMind/hermes-agent-claude-mcp-demo"],
+  "maxCommentLength": 2000,
+  "dryRun": true,
+  "auditLogPath": "./run/audit.jsonl"
+}
